@@ -26,4 +26,4 @@ terraform.rc
 #*.tfvars.json
 
 # Lock file (optional to ignore, but useful to commit for version consistency)
-terraform.lock.hcl
+.terraform.lock.hcl
