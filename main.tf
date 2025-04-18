@@ -26,3 +26,15 @@ module "network" {
   private_subnet_cidrs = var.private_subnet_cidrs
   project = var.project
 }
+
+module "iam" {
+  source = "./modules/iam"
+
+  region                     = var.aws_region
+  project                    = var.project
+  jenkins_master_role_name   = var.jenkins-master-role
+  jenkins_agent_role_name    = var.jenkins-agent-role
+  jenkins_master_policy_name = var.jenkins-master-policy
+  jenkins_agent_policy_name  = var.jenkins-agent-policy
+  vpc_id                     = module.vpc.vpc_id
+}

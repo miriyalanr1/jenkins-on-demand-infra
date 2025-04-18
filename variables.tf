@@ -54,3 +54,15 @@ variable "private_subnet_cidrs" {
 variable "project" {
   type = string
 }
+variable "jenkins-master-role" {
+  type = string  
+}
+variable "jenkins-agent-role" {
+  type = string  
+}
+variable "jenkins-agent-policy" {
+  type = string  
+}
+variable "jenkins-master-policy" {
+  type = string  
+}
